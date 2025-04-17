@@ -35,7 +35,7 @@ def add_book(library):
 def remove_book(library):
     title= input("Enter the book title you want to remove")    
     initial_length= len(library)
-    library= [book for book in library if book["title"].lower() != "title"]
+    library= [book for book in library if book["title"].lower() != title]
     if len(library) < initial_length:
         save_library(library)
         print("Book removed successfully")
